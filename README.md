@@ -31,7 +31,7 @@ plot(iris$Sepal.Length, iris$Sepal.Width)
 
 ![plot Iris](https://github.com/IsraHL/ggplotVSplot/blob/master/plotpoints.jpeg)
 
-Pongamos ambas gráficas y contemplando 4 variables guapas:
+Pongamos ambas gráficas guapas y contemplando 4 variables tenemos:
 
 ```[R project, echo= T]
 ggplot(iris, aes(x=Sepal.Length, y=Sepal.Width, color=Petal.Length, size=Petal.Length, shape=Species)) + 
