@@ -31,7 +31,7 @@ plot(iris$Sepal.Length, iris$Sepal.Width)
 
 ![plot Iris](https://github.com/IsraHL/ggplotVSplot/blob/master/plotpoints.jpeg)
 
-Contemplando 5 variables tenemos y agregando una presentación más estilizada tenemos:
+Contemplando las 5 variables y agregando una presentación más estilizada tenemos:
 
 ```[R project, echo= T]
 ggplot(iris, aes(x=Sepal.Length, y=Sepal.Width, color=Petal.Length, size=Petal.Length, shape=Species)) + 
@@ -51,8 +51,7 @@ ggplot(iris, aes(x=Sepal.Length, y=Sepal.Width, color=Petal.Length, size=Petal.L
              )) + 
     labs(x = "Sepal Length", y = "Sepal Width") + #Titulos de los ejes
     theme( axis.text.x = element_text(face="bold.italic", colour="grey6", size=rel(1)),
-    axis.text.y = element_text(face="bold.italic", colour="grey6", size=rel(1), angle=0, hjust=0.5))+
-    geom_smooth(method="loess", alpha=0.1, se = T, col="grey80")
+    axis.text.y = element_text(face="bold.italic", colour="grey6", size=rel(1), angle=0, hjust=0.5))
 ```
 ![plot Iris](https://github.com/IsraHL/ggplotVSplot/blob/master/Ggpoints2.jpeg)
 
@@ -74,26 +73,6 @@ Por otro lado con el código default tenemos:
         cex= virginica.$Petal.Length, #Tamaño
         col=rgb(red=virginica.$Petal.Length/6.9, green=0, blue=virginica.$Petal.Length/6.9, alpha=.3),
         pch=16)    
-
-    medelosetosa=loess(formula = Sepal.Width ~ Sepal.Length, data = setosa.) 
-    myPredict <- predict( modelosetosa , interval="predict" )
-    ix <- sort(setosa.$Sepal.Length,index.return=T)$ix
-    lines(setosa.$Sepal.Length[ix], myPredict[ix , 1], col='gray80', lwd=1 )  
-    polygon(c(rev(setosa.$Sepal.Length[ix]), setosa.$Sepal.Length[ix]), c(rev(myPredict[ ix,3]), myPredict[ ix,2]), 
-            col = rgb(0.7,0.7,0.7,0.4) , border = NA)  
-    medeloversicolor=loess(formula = Sepal.Width ~ Sepal.Length, data = versicolor.) 
-    myPredict <- predict( modeloversicolor , interval="predict" )
-    ix <- sort(versicolor.$Sepal.Length,index.return=T)$ix
-    lines(versicolor.$Sepal.Length[ix], myPredict[ix , 1], col='gray80', lwd=1 )  
-    polygon(c(rev(versicolor.$Sepal.Length[ix]), versicolor.$Sepal.Length[ix]), c(rev(myPredict[ ix,3]), myPredict[ ix,2]), 
-            col = rgb(0.7,0.7,0.7,0.4) , border = NA)
-    medelovirginica=loess(formula = Sepal.Width ~ Sepal.Length, data = virginica.) 
-    myPredict <- predict( modelovirginica , interval="predict" )
-    ix <- sort(virginica.$Sepal.Length,index.return=T)$ix
-    lines(virginica.$Sepal.Length[ix], myPredict[ix , 1], col='gray80', lwd=1 )  
-    polygon(c(rev(virginica.$Sepal.Length[ix]), virginica.$Sepal.Length[ix]), c(rev(myPredict[ ix,3]), myPredict[ ix,2]), 
-            col = rgb(0.7,0.7,0.7,0.4) , border = NA)
-           
 ```
 
 
