@@ -74,7 +74,7 @@ Por otro lado con el código default tenemos:
         col=rgb(red=virginica.$Petal.Length/6.9, green=0, blue=virginica.$Petal.Length/6.9, alpha=.3),
         pch=16)    
 ```
-
+![plot Iris](https://github.com/IsraHL/ggplotVSplot/blob/master/plotpoints2.jpeg)
 
 
 
