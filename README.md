@@ -60,7 +60,10 @@ Por otro lado con el código default tenemos:
     setosa.=iris[iris$Species=="setosa",]
     versicolor.=iris[iris$Species=="versicolor",]
     virginica.=iris[iris$Species=="virginica",]
-    plot(c(4,8),c(2,4.5),type="n",main="Data Iris",  xlab="Sepal Length", ylab="Sepal Width")
+    plot(c(4,8),c(2,4.5),type="n", #grafico en blanco
+        main="Data Iris",  cex.main=2, #tamaño de fuente titulo
+        xlab="Sepal Length", ylab="Sepal Width", cex.lab=1, #tamaño de fuente titulo de los ejes
+        cex.axis=1 #tamaño de valotes de los ejes)
     points(setosa.$Sepal.Length,setosa.$Sepal.Width,
         cex= setosa.$Petal.Length, #Tamaño
         col=rgb(red=0, green=setosa.$Petal.Length/1.9, blue=0, alpha=.3),
