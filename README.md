@@ -62,8 +62,10 @@ Por otro lado con el código default tenemos:
     virginica.=iris[iris$Species=="virginica",]
     plot(c(4,8),c(2,4.5),type="n", #grafico en blanco
         main="Data Iris",  cex.main=2, #tamaño de fuente titulo
-        xlab="Sepal Length", ylab="Sepal Width", cex.lab=1, #tamaño de fuente titulo de los ejes
-        cex.axis=1 #tamaño de valotes de los ejes)
+        xlab="Sepal Length", ylab="Sepal Width",
+        cex.lab=1, #tamaño de fuente titulo de los ejes
+        cex.axis=1 #tamaño de valotes de los ejes
+        )
     points(setosa.$Sepal.Length,setosa.$Sepal.Width,
         cex= setosa.$Petal.Length, #Tamaño
         col=rgb(red=0, green=setosa.$Petal.Length/1.9, blue=0, alpha=.3),
@@ -77,7 +79,7 @@ Por otro lado con el código default tenemos:
         col=rgb(red=virginica.$Petal.Length/6.9, green=0, blue=virginica.$Petal.Length/6.9, alpha=.3),
         pch=16)    
 ```
-![plot Iris](https://github.com/IsraHL/ggplotVSplot/blob/master/plotpoints2.jpeg)
+![plot Iris](https://github.com/IsraHL/ggplotVSplot/blob/master/plotpoints3.jpeg)
 
 
 
