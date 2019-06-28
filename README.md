@@ -90,4 +90,11 @@ p=function()
     }
 p()
 ```
+En ocasiones necestimos observar la información por diferentes grupos de datos, para ello tenemos:
+```[R project, echo= T]
+pg+facet_grid(~Species)
+```
+![plot Iris](https://github.com/IsraHL/ggplotVSplot/blob/master/plotpoints3.jpeg)
+
+
 
