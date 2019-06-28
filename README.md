@@ -34,7 +34,7 @@ plot(iris$Sepal.Length, iris$Sepal.Width)
 Contemplando las 5 variables y agregando una presentación más estilizada tenemos:
 
 ```[R project, echo= T]
-ggplot(iris, aes(x=Sepal.Length, y=Sepal.Width, color=Petal.Length, size=Petal.Length, shape=Species)) + 
+pg=ggplot(iris, aes(x=Sepal.Length, y=Sepal.Width, color=Petal.Length, size=Petal.Length, shape=Species)) + 
     geom_point(alpha=0.6)+ #alpha nos brinda la posibilidad de aclarar el color de los puntos
     theme_minimal()+ 
     #cambia el tipo de tema en ggplot, algunos otros son theme_bw(), theme_grey(), theme_minimal(), theme_classic().
@@ -52,6 +52,7 @@ ggplot(iris, aes(x=Sepal.Length, y=Sepal.Width, color=Petal.Length, size=Petal.L
     labs(x = "Sepal Length", y = "Sepal Width") + #Titulos de los ejes
     theme( axis.text.x = element_text(face="bold.italic", colour="grey6", size=rel(1)),
     axis.text.y = element_text(face="bold.italic", colour="grey6", size=rel(1), angle=0, hjust=0.5))
+pg
 ```
 ![plot Iris](https://github.com/IsraHL/ggplotVSplot/blob/master/Ggpoints2.jpeg)
 
@@ -81,5 +82,12 @@ Por otro lado con el código default tenemos:
 ```
 ![plot Iris](https://github.com/IsraHL/ggplotVSplot/blob/master/plotpoints3.jpeg)
 
-
+Parte de la comodidad que se encuentra en trabajar con el entorno gráfico de *ggplot* es que las gráficas pueden ser guardadas dentro de una variable y posteriormente ocuparla e ir agregando diferentes caracteristicas o modificaciones, mientras que el comando *plot* (por default) permite guardar el gráfico actual mediante la opción de *recordPlot()* sin poder modificarlo. Una alternativa sería la creación de una función sin parametros donde quede almacenado el codigo de la gráfica, es decir:
+```[R project, echo= T]
+p=function()
+    {
+    #codigo grafica
+    }
+p()
+```
 
