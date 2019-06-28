@@ -96,5 +96,44 @@ pg+facet_grid(~Species)
 ```
 ![plot Iris](https://github.com/IsraHL/ggplotVSplot/blob/master/ggp4.jpeg)
 
+Por otro lado de la manera default en R habría que rediseñar el número de gráficas dentro de la vista en R, para ello y una forma de hacerlo es la siguiente:
+```[R project, echo= T]
+nf=layout(matrix(c(1,2,3), 1, 3, byrow = TRUE)) 
+layout.show(nf) #revisar la división de las graficas
+
+plot(c(4,8),c(2,4.5),type="n", #grafico en blanco
+     main="Setosa",  cex.main=2, #tamaño de fuente titulo
+     xlab="Sepal Length", ylab="Sepal Width",
+     cex.lab=1, #tamaño de fuente titulo de los ejes
+     cex.axis=1 #tamaño de valotes de los ejes
+         )
+points(setosa.$Sepal.Length,setosa.$Sepal.Width,
+       cex= setosa.$Petal.Length, #Tamaño
+       col=rgb(red=0, green=setosa.$Petal.Length/1.9, blue=0, alpha=.3),
+       pch=15)
+ 
+plot(c(4,8),c(2,4.5),type="n", #grafico en blanco
+     main="Versicolor",  cex.main=2, #tamaño de fuente titulo
+     xlab="Sepal Length", ylab="Sepal Width",
+     cex.lab=1, #tamaño de fuente titulo de los ejes
+     cex.axis=1 #tamaño de valotes de los ejes
+      )
+points(versicolor.$Sepal.Length,versicolor.$Sepal.Width,
+       cex= versicolor.$Petal.Length, #Tamaño
+       col=rgb(red=versicolor.$Petal.Length/5.1, green=versicolor.$Petal.Length/5.1, blue=0, alpha=.3),
+       pch=17)
+ 
+plot(c(4,8),c(2,4.5),type="n", #grafico en blanco
+     main="Virginica",  cex.main=2, #tamaño de fuente titulo
+     xlab="Sepal Length", ylab="Sepal Width",
+     cex.lab=1, #tamaño de fuente titulo de los ejes
+     cex.axis=1 #tamaño de valotes de los ejes
+     )
+points(virginica.$Sepal.Length,virginica.$Sepal.Width,
+      cex= virginica.$Petal.Length, #Tamaño
+      col=rgb(red=virginica.$Petal.Length/6.9, green=0, blue=virginica.$Petal.Length/6.9, alpha=.3),
+      pch=16)  
+```
+![plot Iris](https://github.com/IsraHL/ggplotVSplot/blob/master/pp4.jpeg)
 
 
