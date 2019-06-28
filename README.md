@@ -94,7 +94,7 @@ En ocasiones necestimos observar la información por diferentes grupos de datos,
 ```[R project, echo= T]
 pg+facet_grid(~Species)
 ```
-![plot Iris](https://github.com/IsraHL/ggplotVSplot/blob/master/plotpoints3.jpeg)
+![plot Iris](https://github.com/IsraHL/ggplotVSplot/blob/master/ggp4.jpeg)
 
 
 
